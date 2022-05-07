@@ -8,6 +8,7 @@ public class SomeText : MonoBehaviour
     public TextMeshProUGUI MyText;
     public Transform player;
     private int time = 0;
+    public bool PlayerDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,10 @@ public class SomeText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //MyText.text = player.position.ToString();
-        MyText.text = "Score: " + time.ToString();
+        if (!PlayerDead)
+        {
+            MyText.text = "Score: " + time.ToString();
+        }
     }
     IEnumerator Timer()
     {

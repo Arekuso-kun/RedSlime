@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BadThing : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D m_rigidbody;
 
     Vector2 screenBounds = Vector2.zero;
 
@@ -17,7 +17,7 @@ public class BadThing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody.velocity = new Vector2(0, -10);
+        m_rigidbody.velocity = new Vector2(0, -10);
 
         if (- 2 * screenBounds.y > transform.position.y)
             Destroy(this.gameObject);
