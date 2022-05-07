@@ -7,12 +7,19 @@ public class Collision : MonoBehaviour
 {
     public TextMeshProUGUI MyText;
     public SomeText scriptText;
+    public bool Dead = false;
+
+    private void Start()
+    {
+
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.gameObject.name == "Bad Thing(Clone)")
         {
-            Debug.Log("U died!");
-            scriptText.PlayerDead = true;
+            Dead = true;
+            Debug.Log("U died! " + Dead.ToString());
+            Time.timeScale = 0;
         }
     }
 }

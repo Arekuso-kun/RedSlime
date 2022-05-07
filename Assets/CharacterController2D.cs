@@ -135,7 +135,7 @@ public class CharacterController2D : MonoBehaviour
 				JumpedTwice = true;
 			m_Grounded = false;
 
-			Debug.Log(m_Rigidbody2D.velocity);
+			// Debug.Log(m_Rigidbody2D.velocity);
 			m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0f);
 
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
