@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BadThing
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - 
   - 
   - 
-  - bg
-  - fg
+  - BackGround
+  - ForeGround
   - 
   - 
   - 
@@ -38,12 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: bg
+  - name: BackGround
     uniqueID: 2451369071
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: fg
+  - name: ForeGround
     uniqueID: 1975971273
     locked: 0

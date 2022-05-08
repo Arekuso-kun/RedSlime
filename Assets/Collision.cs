@@ -15,7 +15,7 @@ public class Collision : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.gameObject.name == "Bad Thing(Clone)")
+        if (collision.transform.gameObject.tag == "BadThing")
         {
             Dead = true;
             Debug.Log("U died! " + Dead.ToString());

@@ -6,7 +6,6 @@ using TMPro;
 public class SomeText : MonoBehaviour
 {
     public TextMeshProUGUI MyText;
-    public Transform player;
     public int time = 0;
 
     // Start is called before the first frame update
