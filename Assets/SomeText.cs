@@ -5,8 +5,15 @@ using TMPro;
 
 public class SomeText : MonoBehaviour
 {
-    public TextMeshProUGUI MyText;
+    public TextMeshProUGUI m_score;
+    public TextMeshProUGUI m_level;
+    public TextMeshProUGUI m_levelTimer;
     public int time = 0;
+    int levelTimer = 0;
+    int nextlevelTimer;
+    public int level = 1;
+    int levelDuration = 30;
+    float score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +24,16 @@ public class SomeText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MyText.text = "Score: " + time.ToString();
+        if (levelTimer >= levelDuration)
+        {
+            level++;
+            levelTimer = 0;
+        }
+        m_level.text = "Level " + level.ToString();
+        score = time * 100 / levelDuration;
+        m_score.text = "Score: " + score.ToString();
+        nextlevelTimer = 30 - levelTimer;
+        m_levelTimer.text = "Next level: " + nextlevelTimer.ToString();
     }
     IEnumerator Timer()
     {
@@ -25,6 +41,7 @@ public class SomeText : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             time++;
+            levelTimer++;
         }
     }
 }
