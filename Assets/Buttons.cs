@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Restart : MonoBehaviour
+public class Buttons : MonoBehaviour
 {
     public Collision m_collision;
     public GameObject RestartButton;
@@ -45,6 +45,11 @@ public class Restart : MonoBehaviour
         {
             Destroy(Thing);
         }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }
