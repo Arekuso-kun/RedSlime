@@ -34,6 +34,8 @@ public class Buttons : MonoBehaviour
         Time.timeScale = 1;
         RestartButton.SetActive(false);
         m_text.time = 0;
+        m_text.score = 0;
+        m_text.levelTimer = 0;
 
         m_player_Movement.HorizontalMovement = 0;
         m_transform.position = new Vector3(0, 0);

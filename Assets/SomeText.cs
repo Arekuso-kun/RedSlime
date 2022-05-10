@@ -9,11 +9,11 @@ public class SomeText : MonoBehaviour
     public TextMeshProUGUI m_level;
     public TextMeshProUGUI m_levelTimer;
     public int time = 0;
-    int levelTimer = 0;
+    public int levelTimer = 0;
     int nextlevelTimer;
     public int level = 1;
     int levelDuration = 30;
-    float score = 0;
+    public float score = 0;
 
     // Start is called before the first frame update
     void Start()
