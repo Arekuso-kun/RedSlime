@@ -5,7 +5,8 @@ using UnityEngine;
 public class Buttons : MonoBehaviour
 {
     public Collision m_collision;
-    public GameObject RestartButton;
+    public GameObject RestartScreen;
+    public GameObject MMScreen;
     public SomeText m_text;
 
     public GameObject m_player;
@@ -15,7 +16,8 @@ public class Buttons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RestartButton.SetActive(false);
+        RestartScreen.SetActive(false);
+        Time.timeScale = 0;
         //m_collision = FindObjectOfType<Collision>();
     }
 
@@ -24,7 +26,7 @@ public class Buttons : MonoBehaviour
     {
         if (m_collision.Dead == true)
         {
-            RestartButton.SetActive(true);
+            RestartScreen.SetActive(true);
         }
     }
 
@@ -32,7 +34,7 @@ public class Buttons : MonoBehaviour
     {
         m_collision.Dead = false;
         Time.timeScale = 1;
-        RestartButton.SetActive(false);
+        RestartScreen.SetActive(false);
         m_text.time = 0;
         m_text.score = 0;
         m_text.levelTimer = 0;
@@ -52,6 +54,12 @@ public class Buttons : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void PlayGame()
+    {
+        MMScreen.SetActive(false);
+        Time.timeScale = 1;
     }
 
 }

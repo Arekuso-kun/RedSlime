@@ -8,6 +8,9 @@ public class SomeText : MonoBehaviour
     public TextMeshProUGUI m_score;
     public TextMeshProUGUI m_level;
     public TextMeshProUGUI m_levelTimer;
+
+    public Material m_material;
+
     public int time = 0;
     public int levelTimer = 0;
     int nextlevelTimer;
@@ -19,6 +22,7 @@ public class SomeText : MonoBehaviour
     void Start()
     {
         StartCoroutine(Timer());
+        m_material.color = Color.red * 6;
     }
 
     // Update is called once per frame
@@ -42,6 +46,10 @@ public class SomeText : MonoBehaviour
             yield return new WaitForSeconds(1);
             time++;
             levelTimer++;
+            if(levelTimer >= levelDuration)
+            {
+                m_material.color = new Color(Random.Range(0f, 1f) * 6, Random.Range(0f, 1f) * 6, Random.Range(0f, 1f) * 6, 1);
+            }
         }
     }
 }
