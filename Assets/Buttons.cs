@@ -13,15 +13,13 @@ public class Buttons : MonoBehaviour
     public Transform m_transform;
     public Rigidbody2D m_Rigidbody2D;
     public Player_Movement m_player_Movement;
-    // Start is called before the first frame update
+
     void Start()
     {
         RestartScreen.SetActive(false);
         Time.timeScale = 0;
-        //m_collision = FindObjectOfType<Collision>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (m_collision.Dead == true)

@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 739936131}
   - component: {fileID: 739936130}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spawner /w Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 974981572}
   - component: {fileID: 974981574}
   m_Layer: 5
-  m_Name: score
+  m_Name: score /w Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1731,7 +1731,7 @@ GameObject:
   - component: {fileID: 1108213926}
   - component: {fileID: 1108213927}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player /w Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2978,7 +2978,7 @@ GameObject:
   - component: {fileID: 2128139102}
   - component: {fileID: 2128139106}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas /w Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

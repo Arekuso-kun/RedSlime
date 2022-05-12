@@ -9,10 +9,6 @@ public class Collision : MonoBehaviour
     public SomeText scriptText;
     public bool Dead = false;
 
-    private void Start()
-    {
-
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.gameObject.tag == "BadThing")

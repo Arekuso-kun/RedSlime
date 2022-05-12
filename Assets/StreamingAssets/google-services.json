@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1059993118392",
+    "project_id": "redslime-c4649",
+    "storage_bucket": "redslime-c4649.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059993118392:android:5dfa97097e2157a921364d",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.RedSlime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059993118392-4r2koapmd90h534v2u2q3f92ifgt5opn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd-L--LcJX5babiDO9A5utS6Bjf5zPDDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059993118392-4r2koapmd90h534v2u2q3f92ifgt5opn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
