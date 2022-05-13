@@ -3090,6 +3090,7 @@ MonoBehaviour:
   m_transform: {fileID: 1108213920}
   m_Rigidbody2D: {fileID: 1108213918}
   m_player_Movement: {fileID: 1108213922}
+  m_Volume: {fileID: 747171496}
 --- !u!1 &2135071541
 GameObject:
   m_ObjectHideFlags: 0
