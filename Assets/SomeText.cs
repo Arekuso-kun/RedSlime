@@ -22,7 +22,7 @@ public class SomeText : MonoBehaviour
     void Start()
     {
         StartCoroutine(Timer());
-        m_material.color = Color.red * 6;
+        m_material.color = Color.red * 2;
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class SomeText : MonoBehaviour
             levelTimer++;
             if(levelTimer >= levelDuration)
             {
-                m_material.color = new Color(Random.Range(0f, 1f) * 6, Random.Range(0f, 1f) * 6, Random.Range(0f, 1f) * 6, 1);
+                m_material.color = new Color(Random.Range(0f, 1f) * 2, Random.Range(0f, 1f) * 2, Random.Range(0f, 1f) * 2, 1);
             }
         }
     }
