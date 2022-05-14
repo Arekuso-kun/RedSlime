@@ -30,9 +30,9 @@ public class Buttons : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("m_collision.Dead = " + m_collision.Dead.ToString());
+        /*Debug.Log("m_collision.Dead = " + m_collision.Dead.ToString());
         Debug.Log("\ndepthOfFieldValue.active = " + depthOfFieldValue.active.ToString());
-        Debug.Log("\nTime.timeScale = " + Time.timeScale.ToString());
+        Debug.Log("\nTime.timeScale = " + Time.timeScale.ToString());*/
 
         if (m_collision.Dead == true)
         {
@@ -50,8 +50,9 @@ public class Buttons : MonoBehaviour
     public void RestartGame()
     {
         m_collision.Dead = false;
-        Time.timeScale = 1;
         RestartScreen.SetActive(false);
+        Time.timeScale = 1;
+
         m_text.time = 0;
         m_text.score = 0;
         m_text.levelTimer = 0;

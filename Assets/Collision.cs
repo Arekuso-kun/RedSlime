@@ -11,10 +11,10 @@ public class Collision : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.gameObject.tag == "BadThing")
+        if (collision.transform.gameObject.CompareTag("BadThing"))
         {
             Dead = true;
-            Debug.Log("U died! " + Dead.ToString());
+            Debug.Log("Dead = " + Dead.ToString());
             Time.timeScale = 0;
         }
     }

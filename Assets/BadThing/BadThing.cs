@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BadThing : MonoBehaviour
 {
-    public Rigidbody2D m_rigidbody;
+    // public Rigidbody2D m_rigidbody;
+    SomeText m_text;
 
     Vector2 screenBounds = Vector2.zero;
 
@@ -12,19 +13,34 @@ public class BadThing : MonoBehaviour
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+
+        // Setting up the reference.
+        m_text = GameObject.FindWithTag("scoringSystem").GetComponent<SomeText>();
+
+        StartCoroutine(DestroyThingFarAway(1));
+
+        // m_rigidbody.velocity = new Vector2(0, Mathf.Pow(2, (-m_text.level + 13) / 4f) - 15f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_rigidbody.velocity = new Vector2(0, -10);
-
-        if (- 2 * screenBounds.y > transform.position.y)
-            Destroy(this.gameObject);
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+        if (!collision.transform.gameObject.CompareTag("BadThing"))
+            Destroy(this.gameObject);
 
+    }
+
+    IEnumerator DestroyThingFarAway(float seconds)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(seconds);
+            if (Mathf.Abs(transform.position.y) > Mathf.Abs(2 * screenBounds.y) || Mathf.Abs(transform.position.x) > Mathf.Abs(2 * screenBounds.x))
+                Destroy(this.gameObject);
+        }
     }
 }

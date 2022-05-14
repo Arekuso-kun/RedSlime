@@ -12,17 +12,18 @@ public class SomeText : MonoBehaviour
     public Material m_material;
 
     public int time = 0;
+    public float score = 0;
+
+    public int level = 1;
     public int levelTimer = 0;
     int nextlevelTimer;
-    public int level = 1;
     int levelDuration = 30;
-    public float score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Timer());
-        m_material.color = Color.red * 2;
+        m_material.color = Color.red;
     }
 
     // Update is called once per frame
@@ -34,9 +35,11 @@ public class SomeText : MonoBehaviour
             levelTimer = 0;
         }
         m_level.text = "Level " + level.ToString();
-        score = time * 100 / levelDuration;
+        score = levelTimer * 100 / levelDuration + 100 * (level - 1);
+
         m_score.text = "Score: " + score.ToString();
-        nextlevelTimer = 30 - levelTimer;
+        nextlevelTimer = levelDuration - levelTimer;
+
         m_levelTimer.text = "Next level: " + nextlevelTimer.ToString();
     }
     IEnumerator Timer()
@@ -48,7 +51,7 @@ public class SomeText : MonoBehaviour
             levelTimer++;
             if(levelTimer >= levelDuration)
             {
-                m_material.color = new Color(Random.Range(0f, 1f) * 2, Random.Range(0f, 1f) * 2, Random.Range(0f, 1f) * 2, 1);
+                m_material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1);
             }
         }
     }
