@@ -10,7 +10,8 @@ public class roundThings : MonoBehaviour
     Rigidbody2D m_rigidbody2d;
 
     public BadThingSpawner m_BadThingSpawner;
-    public float speed;
+    float speed;
+    float numberOfThingsInASpawn = 16;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +37,9 @@ public class roundThings : MonoBehaviour
     {
         while (true)
         {
+            Debug.Log(Mathf.PI / numberOfThingsInASpawn);
             yield return new WaitForSeconds(1);
-            for (float i = 0; i <= 2 * Mathf.PI; i += 0.2f)
+            for (float i = 0; i <= 2 * Mathf.PI; i += 2 * Mathf.PI / numberOfThingsInASpawn)
             {
                 speed = m_BadThingSpawner.speed;
                 Spawn(Mathf.Sin(i) * speed, Mathf.Cos(i) * speed);

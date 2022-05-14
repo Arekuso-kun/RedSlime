@@ -23,6 +23,8 @@ public class BadThingSpawner : MonoBehaviour
 
     void Start()
     {
+        speed = -(SpawnTimeFormula(m_text.level - 12.5f) - 12);
+
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         StartCoroutine(Spawner());
     }

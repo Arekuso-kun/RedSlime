@@ -27,7 +27,7 @@ public class BadThing : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.transform.gameObject.CompareTag("BadThing"))
             Destroy(this.gameObject);

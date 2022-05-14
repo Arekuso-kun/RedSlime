@@ -9,7 +9,7 @@ public class Collision : MonoBehaviour
     public SomeText scriptText;
     public bool Dead = false;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.gameObject.CompareTag("BadThing"))
         {
