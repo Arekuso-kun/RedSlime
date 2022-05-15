@@ -339,7 +339,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &359888418
 GameObject:
@@ -454,7 +454,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &518166061
 GameObject:
@@ -734,7 +734,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &582960929
 GameObject:
@@ -845,7 +845,9 @@ MonoBehaviour:
   BadThingPrefab: {fileID: 3653942360161776172, guid: 1b1cb4b959059af4e88af394905e4351, type: 3}
   m_text: {fileID: 974981574}
   m_collision: {fileID: 1108213924}
+  m_roundThings: {fileID: 1296472420}
   speed: 0
+  aspectRatio: 1
 --- !u!4 &739936131
 Transform:
   m_ObjectHideFlags: 0
@@ -859,7 +861,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &747171495
 GameObject:
@@ -908,7 +910,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &756615378
 GameObject:
@@ -1088,7 +1090,7 @@ Transform:
   m_Children:
   - {fileID: 2135071542}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866544706
 GameObject:
@@ -1172,7 +1174,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &877728621
 GameObject:
@@ -1256,7 +1258,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951346732
 GameObject:
@@ -1548,6 +1550,7 @@ MonoBehaviour:
   score: 0
   level: 1
   levelTimer: 0
+  levelDuration: 30
 --- !u!1 &986637043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1829,7 @@ Transform:
   - {fileID: 359888419}
   - {fileID: 986637044}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1108213922
 MonoBehaviour:
@@ -2129,7 +2132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1296472419
 GameObject:
@@ -2164,6 +2167,8 @@ MonoBehaviour:
   m_transform: {fileID: 1296472421}
   m_text: {fileID: 974981574}
   m_BadThingSpawner: {fileID: 739936130}
+  numberOfThingsInASpawn: 16
+  SpawnTimeR: 0
 --- !u!4 &1296472421
 Transform:
   m_ObjectHideFlags: 0
@@ -2172,12 +2177,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296472419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.01, y: 1.16, z: -10}
+  m_LocalPosition: {x: 0, y: 6.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1335080455
 GameObject:
@@ -2514,7 +2519,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1780689638
 GameObject:
@@ -2884,7 +2889,7 @@ RectTransform:
   - {fileID: 518166062}
   - {fileID: 582960930}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4081,5 +4086,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

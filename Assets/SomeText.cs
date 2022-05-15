@@ -17,7 +17,7 @@ public class SomeText : MonoBehaviour
     public int level = 1;
     public int levelTimer = 0;
     int nextlevelTimer;
-    int levelDuration = 30;
+    public int levelDuration = 30;
 
     // Start is called before the first frame update
     void Start()

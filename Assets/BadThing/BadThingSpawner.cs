@@ -7,6 +7,7 @@ public class BadThingSpawner : MonoBehaviour
     public GameObject BadThingPrefab;
     public SomeText m_text;
     public Collision m_collision;
+    public roundThings m_roundThings;
     Rigidbody2D m_rigidbody;
 
     public float speed;
@@ -15,7 +16,7 @@ public class BadThingSpawner : MonoBehaviour
     float maxSpawnTime = 0.05f;
     float SpawnTime;
 
-    float aspectRatio = Screen.width / Screen.height;
+    public float aspectRatio = Screen.width / Screen.height;
 
     bool initialDelay = true;
 
@@ -37,8 +38,9 @@ public class BadThingSpawner : MonoBehaviour
         SpawnTime = SpawnTimeFormula(m_text.level);
     }
 
-    float SpawnTimeFormula(float x)
+    public float SpawnTimeFormula(float x)
     {
+        // Debug.Log(m_text.levelDuration / SpawnTime); // number = duration / spawntime -> spawntime = duration / number
         return Mathf.Pow(initialSpawnTime, 1 + (x - 1) / 5.0f) + maxSpawnTime;
     }
     void Spawn()
